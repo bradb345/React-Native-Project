@@ -8,7 +8,7 @@ class WelcomeScreen extends Component {
     return (
       
       <V center >
-        <T white large> hello world </T>
+        <T white medium> hello world </T>
       </V>
     )
   }
