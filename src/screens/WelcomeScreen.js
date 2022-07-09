@@ -3,12 +3,15 @@ import { StyleSheet, Text, } from 'react-native';
 import V from '../atoms/V';
 import T from '../atoms/T';
 
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 class WelcomeScreen extends Component {
   render() {
     return (
       
       <V center >
-        <T white medium> hello world </T>
+        <Ionicons name="heart-outline" size={40} color="#fff" />
+        <T white medium> hello bitches </T>
       </V>
     )
   }

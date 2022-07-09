@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { SafeAreaView, StyleSheet, StatusBar, View } from 'react-native';
 import { theme } from '../helpers';
-import V from './V';
+
 
 export default class Container extends Component {
   render() {
@@ -21,9 +21,7 @@ export default class Container extends Component {
 
     return (
       <SafeAreaView {...p} style={styles.container}>
-        <View {...p} style={styles.view}>
-
-        </View>
+        
       </SafeAreaView>
     )
   }
