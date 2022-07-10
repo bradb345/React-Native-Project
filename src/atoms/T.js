@@ -8,7 +8,7 @@ export default class T extends Component {
 
     const styles = {
       tContainer: {
-        fontSize: p.large ? 60 : p.medium ? 30 : 16,
+        fontSize: p.large ? 60 : p.medium ? 40 : 26,
         color: p.white ? "white" : "black",
         ...p.style
       }
@@ -17,7 +17,6 @@ export default class T extends Component {
     return(
       <Text {...p} white={undefined} large={undefined} medium={undefined} style={styles.tContainer}/>
 
-      
     )
   }
 }

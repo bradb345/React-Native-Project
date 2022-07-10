@@ -5,6 +5,7 @@ import T from "./T"
 import Row from '../atoms/Row'
 
 import Ionicons from "react-native-vector-icons/Ionicons"
+import Icon from "../atoms/Icon"
 
 
 export default class Header extends Component {
@@ -14,7 +15,7 @@ export default class Header extends Component {
     const styles = {
       header: {
         backgroundColor: theme.darkGrey,
-        height: 40,
+        height: 60,
         paddingLeft: theme.padXM,
         paddingRight: theme.padXM,
         justifyContent: 'space-between'
@@ -35,6 +36,7 @@ export default class Header extends Component {
         }}>
           <Ionicons name="heart-outline" size={20} color="#fff" style={{marginRight:10}}/>
           <Ionicons name="heart-outline" size={20} color="#fff" style={{marginRight:10}}/>
+          <Icon ionicons name="heart-dislike-outline" style={{marginRight:5}}/>
           <Ionicons name="heart-outline" size={20} color="#fff" />
         </Row>
       </Row>
