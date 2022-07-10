@@ -11,13 +11,10 @@ export default class Container extends Component {
     const styles = StyleSheet.create({
       container: {
         flex: 1,
-        padding: theme.padXM,
+        // padding: theme.padXM,
         backgroundColor: theme.dark,
       },
-      view: {
-        flex: 1,
-        padding: theme.padXM,
-      },
+      
     })
 
     return (

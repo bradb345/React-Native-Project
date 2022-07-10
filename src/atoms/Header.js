@@ -24,21 +24,21 @@ export default class Header extends Component {
     return (
       <Row left style={styles.header}>
         <Row style={{
-          flex: 2
+          // flex: 2
         }}>
           <T white >
             Audiobook Player
           </T>
         </Row>
         <Row style={{
-          flex: 0.5,
-          justifyContent: 'space-between'
+          
         }}>
-          <Ionicons name="heart-outline" size={20} color="#fff" />
-          <Ionicons name="heart-outline" size={20} color="#fff" />
+          <Ionicons name="heart-outline" size={20} color="#fff" style={{marginRight:10}}/>
+          <Ionicons name="heart-outline" size={20} color="#fff" style={{marginRight:10}}/>
           <Ionicons name="heart-outline" size={20} color="#fff" />
         </Row>
       </Row>
+      
     )
   }
 }

@@ -10,14 +10,14 @@ export default class V extends Component {
       rContainer: {
         // flex: 1,
         flexDirection: "row",
-        alignItems: p.center || p.left ? "center" : "flex-start", // note: sometimes "center" breaks proper overflow scrolling
+        alignItems: p.center ? "center" : p.left ? "center" : "flex-start", // note: sometimes "center" breaks proper overflow scrolling
         justifyContent: p.center ? "center" : "flex-start",
         ...p.style
       }
     })
 
     return (
-      <View {...p} center={undefined} style={styles.rContainer}/>
+      <View {...p} center={undefined} left={undefined} style={styles.rContainer}/>
         
     )
 
