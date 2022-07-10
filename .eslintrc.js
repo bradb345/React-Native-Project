@@ -1,4 +1,11 @@
 module.exports = {
   root: true,
-  // extends: '@react-native-community',
+  extends: '@react-native-community',
+  {
+  "parserOptions": {
+    "sourceType": "module",
+      "ecmaVersion": 2020
+  }
+}
 };
+

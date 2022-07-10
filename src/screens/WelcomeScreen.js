@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, } from 'react-native';
 import V from '../atoms/V';
 import T from '../atoms/T';
+import Row from '../atoms/Row';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 

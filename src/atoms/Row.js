@@ -7,19 +7,19 @@ export default class V extends Component {
     const p = this.props
 
     const styles = StyleSheet.create({
-      vContainer: {
-        flex: 1,
-        alignItems: p.center ? "center" : "flex-start", // note: sometimes "center" breaks proper overflow scrolling
+      rContainer: {
+        // flex: 1,
+        flexDirection: "row",
+        alignItems: p.center || p.left ? "center" : "flex-start", // note: sometimes "center" breaks proper overflow scrolling
         justifyContent: p.center ? "center" : "flex-start",
         ...p.style
       }
     })
 
     return (
-      <View {...p} center={undefined} style={styles.vContainer}/>
+      <View {...p} center={undefined} style={styles.rContainer}/>
         
     )
 
   }
 }
-

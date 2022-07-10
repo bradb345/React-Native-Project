@@ -15,9 +15,9 @@ export default class T extends Component {
     }
 
     return(
-      <Text {...p} white={undefined} large={undefined} medium={undefined} style={styles.tContainer}>
+      <Text {...p} white={undefined} large={undefined} medium={undefined} style={styles.tContainer}/>
 
-      </Text>
+      
     )
   }
 }
