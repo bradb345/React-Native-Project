@@ -11,7 +11,7 @@ export default class Icon extends Component {
 
     const styles = {
       icon: {
-        fontSize: 20,
+        fontSize: 25,
         color: "#fff"
       }
     }
@@ -19,7 +19,7 @@ export default class Icon extends Component {
     return (
       <>
         {p.touchable ?
-          <TouchableOpacity {...p} onpress={undefined}>
+          <TouchableOpacity onPress={p.press}>
             {p.ionicons && <Ionicons {...p} name={p.name || "heart-outline"} style={{ ...styles.icon, ...p.style }} />}
             {p.materialicons && <MaterialIcons {...p} name={p.name || "star-rate"} style={{ ...styles.icon, ...p.style }} />}
           </TouchableOpacity>

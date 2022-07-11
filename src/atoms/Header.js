@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { TouchableOpacity } from "react-native"
 import { theme } from "../helpers"
 import V from '../atoms/V'
 import T from "./T"
@@ -22,6 +23,10 @@ export default class Header extends Component {
       }
     }
 
+    const onPress = ()=>{
+      console.log("ouch, dont touch me")
+    }
+
     return (
       <Row left style={styles.header}>
         <Row style={{
@@ -34,10 +39,9 @@ export default class Header extends Component {
         <Row style={{
           
         }}>
-          <Ionicons name="heart-outline" size={20} color="#fff" style={{marginRight:10}}/>
-          <Ionicons name="heart-outline" size={20} color="#fff" style={{marginRight:10}}/>
-          <Icon ionicons name="heart-dislike-outline" style={{marginRight:5}}/>
-          <Ionicons name="heart-outline" size={20} color="#fff" />
+          <Icon touchable ionicons name="folder-outline" style={{marginRight:20}} press={onPress}/>
+          <Icon touchable ionicons name="list-outline" style={{marginRight:20}}/>
+          <Icon touchable ionicons name="settings-outline" style={{marginLeft:0}}/>
         </Row>
       </Row>
       
