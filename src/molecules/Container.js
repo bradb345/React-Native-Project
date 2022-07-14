@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { SafeAreaView, StyleSheet, StatusBar, View } from 'react-native'
 import Header from '../atoms/Header'
-import WelcomeScreen from '../screens/WelcomeScreen'
+import HomeScreen from '../screens/HomeScreen'
 import { theme } from '../helpers'
 
 export default class Container extends Component {
@@ -14,13 +14,13 @@ export default class Container extends Component {
         // padding: theme.padXM,
         backgroundColor: theme.dark,
       },
-      
+
     })
 
     return (
       <SafeAreaView {...p} style={styles.container} >
         <Header/>
-        <WelcomeScreen/>
+        <HomeScreen/>
       </SafeAreaView>
     ) 
   }

@@ -8,7 +8,7 @@ import Icon from '../atoms/Icon';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-class WelcomeScreen extends Component {
+class HomeScreen extends Component {
   render() {
 
     const styles = StyleSheet.create({
@@ -28,4 +28,4 @@ class WelcomeScreen extends Component {
   }
 }
 
-export default WelcomeScreen
+export default HomeScreen
