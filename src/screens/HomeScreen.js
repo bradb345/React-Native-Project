@@ -6,10 +6,11 @@ import T from '../atoms/T';
 import Row from '../atoms/Row';
 import Icon from '../atoms/Icon';
 
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 class HomeScreen extends Component {
   render() {
+
+    const p = this.props
 
     const styles = StyleSheet.create({
       container: {
@@ -21,7 +22,7 @@ class HomeScreen extends Component {
     return (
 
       <V center style={styles.container}>
-        <Icon touchable ionicons name="heart-dislike-outline" />
+        <Icon touchable press={() => p.navigation.navigate("PlayScreen")} ionicons name="heart-dislike-outline" />
         <T white large> hello bitches </T>
       </V>
     )

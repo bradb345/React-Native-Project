@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Provider as PaperProvider } from 'react-native-paper';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { theme } from './src/helpers/theme'
+
 
 import Container from './src/molecules/Container';
 
@@ -8,9 +10,13 @@ import Container from './src/molecules/Container';
 class App extends Component {
   render() {
     return (
-      <PaperProvider>
-        <Container/>
-      </PaperProvider>
+      <NavigationContainer theme={{colors:{
+        background: theme.dark
+      }}}>
+        <PaperProvider>
+          <Container />
+        </PaperProvider>
+      </NavigationContainer>
     )
   }
 }
