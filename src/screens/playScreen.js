@@ -10,6 +10,8 @@ import Icon from '../atoms/Icon';
 class PlayScreen extends Component {
   render() {
 
+    const p = this.props
+
     const styles = StyleSheet.create({
       container: {
         padding: theme.padXM,
@@ -20,7 +22,7 @@ class PlayScreen extends Component {
     return (
 
       <V center style={styles.container}>
-        <Icon touchable ionicons name="heart-outline" />
+        <Icon touchable ionicons name="heart-outline" press={() => p.navigation.goBack()}/>
         <T white large> Play screen bitches </T>
       </V>
     )

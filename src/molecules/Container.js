@@ -24,10 +24,12 @@ export default class Container extends Component {
     })
 
     return (
-      <SafeAreaView {...p} style={styles.container} >
+      <SafeAreaView style={styles.container} >
         <Header />
-        <Stack.Navigator>
-          <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown: false}}/>
+        <Stack.Navigator screenOptions={{
+          headerShown: false
+        }}>
+          <Stack.Screen name="HomeScreen" component={HomeScreen}/>
           <Stack.Screen name="PlayScreen" component={PlayScreen} />
         </Stack.Navigator>
 
