@@ -5,6 +5,7 @@ import V from '../atoms/V';
 import T from '../atoms/T';
 import Row from '../atoms/Row';
 import Icon from '../atoms/Icon';
+import Header from '../atoms/Header';
 
 
 class PlayScreen extends Component {
@@ -20,11 +21,14 @@ class PlayScreen extends Component {
 
     })
     return (
+      <>
+        <Header {...p}/>
 
-      <V center style={styles.container}>
-        <Icon touchable ionicons name="heart-outline" press={() => p.navigation.goBack()}/>
-        <T white large> Play screen bitches </T>
-      </V>
+        <V center style={styles.container}>
+          <Icon touchable ionicons name="heart-outline" press={() => p.navigation.goBack()} />
+          <T white large> Play screen bitches </T>
+        </V>
+      </>
     )
   }
 }

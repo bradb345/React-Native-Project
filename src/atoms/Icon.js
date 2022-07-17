@@ -12,7 +12,9 @@ export default class Icon extends Component {
     const styles = {
       icon: {
         fontSize: 25,
-        color: "#fff"
+        color: "#fff",
+        ...p.style
+
       }
     }
 
