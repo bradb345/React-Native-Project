@@ -3,6 +3,8 @@ import Container from "../molecules/Container";
 import T from "./T";
 import Row from "./Row";
 import Icon from "./Icon";
+import Header from "./Header";
+import Tile from "./Tile";
 
 export default {
   V,
@@ -10,4 +12,6 @@ export default {
   T,
   Row,
   Icon,
+  Header,
+  Tile
 }

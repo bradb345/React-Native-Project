@@ -6,6 +6,7 @@ import T from '../atoms/T';
 import Row from '../atoms/Row';
 import Icon from '../atoms/Icon';
 import Header from '../atoms/Header';
+import Tile from '../atoms/Tile';
 
 
 class HomeScreen extends Component {
@@ -16,7 +17,7 @@ class HomeScreen extends Component {
     const styles = StyleSheet.create({
       container: {
         padding: theme.padXM,
-
+        // flex: 1
       },
 
     })
@@ -24,9 +25,19 @@ class HomeScreen extends Component {
       <>
         <Header />
 
-        <V center style={styles.container}>
-          <Icon touchable press={() => p.navigation.navigate("PlayScreen")} ionicons name="heart-dislike-outline" />
-          <T white large> hello bitches </T>
+        <V style={styles.container}>
+          <V center style={{
+            marginBottom: 20,
+            }}>
+            <Icon touchable press={() => p.navigation.navigate("PlayScreen")} ionicons name="heart-dislike-outline" />
+            <T white large> hello bitches </T>
+          </V>
+          <V style={{
+            // marginBottom: 20
+          }}>
+            <Tile/>
+            <Tile/>
+          </V>
         </V>
       </>
     )
