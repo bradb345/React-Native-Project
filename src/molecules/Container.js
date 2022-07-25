@@ -18,12 +18,14 @@ export default class Container extends Component {
       container: {
         flex: 1,
         // padding: theme.padXM,
-        backgroundColor: theme.dark,
+        backgroundColor: theme.grey,
+        color: theme.gray
       },
 
     })
 
     return (
+      
       <SafeAreaView style={styles.container} >
         {/* <Header /> */}
         <Stack.Navigator screenOptions={{

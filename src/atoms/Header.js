@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { TouchableOpacity } from "react-native"
+import { TouchableOpacity, StatusBar } from "react-native"
 import { theme } from "../helpers"
 import V from '../atoms/V'
 import T from "./T"
@@ -27,7 +27,7 @@ class Header extends Component {
     const styles = {
       header: {
         display: "flex",
-        backgroundColor: theme.darkGrey,
+        backgroundColor: theme.grey,
         height: 60,
         paddingLeft: theme.padXM,
         paddingRight: theme.padXM,
@@ -41,6 +41,7 @@ class Header extends Component {
 
     return (
       <Row left style={styles.header}>
+        {/* <StatusBar  barStyle="light-content" translucent={true} /> */}
         <Row>
 
           {enableBackArrow &&

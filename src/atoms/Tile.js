@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { TouchableOpacity } from "react-native"
+import { TouchableOpacity, StyleSheet } from "react-native"
 import { theme } from "../helpers"
 import V from "./V";
 import T from "./T";
@@ -10,9 +10,18 @@ import Slider from "@react-native-community/slider";
 export default class Tile extends Component {
   render() {
     const p = this.props
+
+    const styles = StyleSheet.create({
+      tileSlider: {
+        // flex: 1,
+        width: "100%",
+        ...p.style
+      }
+    })
+
     return (
       <V style={{
-        backgroundColor: theme.darkGrey,
+        backgroundColor: theme.grey,
         marginBottom: 10,
         borderRadius: 5,
       }}>
@@ -22,19 +31,19 @@ export default class Tile extends Component {
           left={(props) => <Avatar.Icon {...props} icon="folder" />}
           // right={(props) => <IconButton {...props} icon="more-vert" onPress={() => { }} />}
           titleStyle={{
-            backgroundColor: theme.darkGrey,
+            backgroundColor: theme.grey,
             color: "white",
           }}
           subtitleStyle={{
-            backgroundColor: theme.darkGrey,
+            backgroundColor: theme.grey,
             color: "white",
           }}
           leftStyle={{
-            backgroundColor: theme.darkGrey,
+            backgroundColor: theme.grey,
             color: "white",
           }}
           rightStyle={{
-            backgroundColor: theme.darkGrey,
+            backgroundColor: theme.grey,
             color: "white",
           }}
           style={{
@@ -51,11 +60,7 @@ export default class Tile extends Component {
             thumbTintColor="blue"
             minimumTrackTintColor="white"
             maximumTrackTintColor="red"
-            style={{
-              width: "100%",
-              height: 20,
-              padding: 5
-            }}
+            style={styles.tileSlider}
           />
 
       </V>

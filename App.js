@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <NavigationContainer theme={{colors:{
-        background: theme.dark
+        background: theme.black
       }}}>
         <PaperProvider>
           <Container />

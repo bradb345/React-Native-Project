@@ -4,7 +4,8 @@ import { useDimensions, useDeviceOrientation } from '@react-native-community/hoo
 const padXM = 15
 
 export const theme = {
-  dark: "#171716",
-  darkGrey: "#82817B",
+  black: "#171716",
+  grey: "#82817B",
+  darkGrey: "#3A3B3C" ,
   padXM,
 }
