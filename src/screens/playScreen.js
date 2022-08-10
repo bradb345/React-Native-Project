@@ -6,6 +6,7 @@ import T from '../atoms/T';
 import Row from '../atoms/Row';
 import Icon from '../atoms/Icon';
 import Header from '../atoms/Header';
+import MainCard from '../atoms/MainCard';
 
 
 class PlayScreen extends Component {
@@ -27,6 +28,7 @@ class PlayScreen extends Component {
         <V center style={styles.container}>
           <Icon touchable ionicons name="heart-outline" press={() => p.navigation.goBack()} />
           <T white large> Play screen bitches </T>
+          <MainCard/>
         </V>
       </>
     )

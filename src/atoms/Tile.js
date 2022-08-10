@@ -15,6 +15,7 @@ export default class Tile extends Component {
       tileSlider: {
         // flex: 1,
         width: "100%",
+        
         ...p.style
       }
     })
@@ -24,9 +25,10 @@ export default class Tile extends Component {
         backgroundColor: theme.grey,
         marginBottom: 10,
         borderRadius: 5,
+        padding: 10
       }}>
         <Card.Title
-          title="Card Titlee"
+          title="Card Title"
           subtitle="Card Subtitle"
           left={(props) => <Avatar.Icon {...props} icon="folder" />}
           // right={(props) => <IconButton {...props} icon="more-vert" onPress={() => { }} />}

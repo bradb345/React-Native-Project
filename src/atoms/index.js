@@ -5,6 +5,7 @@ import Row from "./Row";
 import Icon from "./Icon";
 import Header from "./Header";
 import Tile from "./Tile";
+import MainCard from "./MainCard";
 
 export default {
   V,
@@ -13,5 +14,6 @@ export default {
   Row,
   Icon,
   Header,
-  Tile
+  Tile,
+  MainCard
 }

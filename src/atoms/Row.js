@@ -8,7 +8,6 @@ export default class V extends Component {
 
     const styles = StyleSheet.create({
       rContainer: {
-        // flex: 1,
         flexDirection: "row",
         alignItems: p.center ? "center" : p.left ? "center" : "flex-start", // note: sometimes "center" breaks proper overflow scrolling
         justifyContent: p.center ? "center" : "flex-start",
