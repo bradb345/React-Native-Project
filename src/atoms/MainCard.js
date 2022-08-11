@@ -35,10 +35,7 @@ export default class MainCard extends Component {
         }}>
           <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
           <Card.Title title="Card Title" subtitle="Card Subtitle" />
-          <Card.Content>
-            <Title>Card title</Title>
-            <Paragraph>Card content</Paragraph>
-          </Card.Content>
+          
         </Card>
 
         <Row center >
@@ -55,7 +52,7 @@ export default class MainCard extends Component {
             style={styles.tileSlider}
           />
 
-          <T white small>1:00</T>
+          <T white small>1:20</T>
         </Row>
         
 
