@@ -6,6 +6,7 @@ import Icon from "./Icon";
 import Header from "./Header";
 import Tile from "./Tile";
 import MainCard from "./MainCard";
+import ProgressSlider from "./ProgressSlider";
 
 export default {
   V,
@@ -15,5 +16,6 @@ export default {
   Icon,
   Header,
   Tile,
-  MainCard
+  MainCard,
+  ProgressSlider
 }

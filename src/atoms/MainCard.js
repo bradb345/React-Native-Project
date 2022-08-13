@@ -5,21 +5,13 @@ import V from "./V";
 import T from "./T";
 import Row from "./Row";
 import { Avatar, Card, Title, Paragraph, IconButton, ProgressBar } from 'react-native-paper';
-import Slider from "@react-native-community/slider";
+import ProgressSlider from "./ProgressSlider";
 
 
 export default class MainCard extends Component {
   render() {
     const p = this.props
 
-    const styles = StyleSheet.create({
-      tileSlider: {
-        flex: 1,
-        width: "100%",
-
-        ...p.style
-      }
-    })
 
     return (
       <V style={{
@@ -28,7 +20,7 @@ export default class MainCard extends Component {
         marginBottom: 10,
         borderRadius: 5,
         padding: 10,
-        ...p.style
+        // ...p.style
       }}>
         <Card style={{
           width: "100%"
@@ -38,22 +30,7 @@ export default class MainCard extends Component {
           
         </Card>
 
-        <Row center >
-          <T white small>1:00</T>
-
-          <Slider
-            value={20}
-
-            minimumValue={0}
-            maximumValue={100}
-            thumbTintColor="blue"
-            minimumTrackTintColor="white"
-            maximumTrackTintColor="red"
-            style={styles.tileSlider}
-          />
-
-          <T white small>1:20</T>
-        </Row>
+        
         
 
 

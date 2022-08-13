@@ -7,6 +7,7 @@ import Row from '../atoms/Row';
 import Icon from '../atoms/Icon';
 import Header from '../atoms/Header';
 import MainCard from '../atoms/MainCard';
+import ProgressSlider from '../atoms/ProgressSlider';
 
 
 class PlayScreen extends Component {
@@ -23,13 +24,27 @@ class PlayScreen extends Component {
     })
     return (
       <>
-        <Header {...p}/>
+        <Header {...p} />
 
-        <V center style={styles.container}>
-          <Icon touchable ionicons name="heart-outline" press={() => p.navigation.goBack()} />
-          <T white large> Play screen bitches </T>
-          <MainCard/>
+        <V style={styles.container}>
+
+          <V center style={{ width: "100%" }}>
+            <Icon touchable ionicons name="heart-outline" press={() => p.navigation.goBack()} />
+            <T  white medium > Play screen bitches </T>
+            <MainCard />
+          </V>
+          <V style={{ width: "100%" }}>
+            <Row center >
+              <T white small>1:00</T>
+
+              <ProgressSlider />
+
+              <T white small>1:20</T>
+            </Row>
+          </V>
         </V>
+
+
       </>
     )
   }

@@ -4,7 +4,7 @@ import { theme } from "../helpers"
 import V from "./V";
 import T from "./T";
 import { Avatar, Card, IconButton, ProgressBar } from 'react-native-paper';
-import Slider from "@react-native-community/slider";
+import ProgressSlider from "./ProgressSlider";
 
 
 export default class Tile extends Component {
@@ -12,21 +12,24 @@ export default class Tile extends Component {
     const p = this.props
 
     const styles = StyleSheet.create({
-      tileSlider: {
-        // flex: 1,
-        width: "100%",
-        
-        ...p.style
-      }
+
     })
 
+
     return (
-      <V style={{
-        backgroundColor: theme.grey,
-        marginBottom: 10,
-        borderRadius: 5,
-        padding: 10
-      }}>
+      <V
+
+        style={{
+          backgroundColor: theme.grey,
+          marginBottom: 10,
+          borderRadius: 5,
+          width: "100%",
+          height: 100
+
+        }}
+      >
+
+
         <Card.Title
           title="Card Title"
           subtitle="Card Subtitle"
@@ -53,20 +56,10 @@ export default class Tile extends Component {
           }}
         />
 
-        
-          <Slider
-            value={20}
-            
-            minimumValue={0}
-            maximumValue={100}
-            thumbTintColor="blue"
-            minimumTrackTintColor="white"
-            maximumTrackTintColor="red"
-            style={styles.tileSlider}
-          />
+
+        <ProgressSlider home />
 
       </V>
-
 
     )
   }
