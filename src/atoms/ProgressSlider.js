@@ -14,8 +14,8 @@ export default class ProgressSlider extends Component {
 
     const styles = StyleSheet.create({
       thumb: {
-        width: p.home ? 0 : 10,
-        height: p.home ? 0 : 10,
+        width: p.untouchable ? 0 : 10,
+        height: p.untouchable ? 0 : 10,
       },
       container: {
         flex: 1,
@@ -30,8 +30,9 @@ export default class ProgressSlider extends Component {
 
     return (
       <V
-        style={styles.container}
-        {...p}
+        style={{
+          ...styles.container
+        }}
       >
         <Slider
           value={20}
@@ -39,9 +40,9 @@ export default class ProgressSlider extends Component {
           maximumValue={100}
           thumbTintColor={theme.postRollColor}
           thumbStyle={styles.thumb}
-          thumbTouchSize={p.home ? 0 : 20}
           minimumTrackTintColor={theme.postRollColor}
           maximumTrackTintColor={theme.preRollColor}
+          disabled={p.untouchable}
         />
       </V>
     )

@@ -26,17 +26,16 @@ class HomeScreen extends Component {
         <Header />
 
         <V style={styles.container}>
-          <V center style={{
+          <V style={{
             marginBottom: 20,
             }}>
-            <Icon touchable press={() => p.navigation.navigate("PlayScreen")} ionicons name="heart-dislike-outline" />
-            <T white large> hello bitches </T>
+            <T white> Started </T>
           </V>
           <V style={{
             // marginBottom: 20
           }}>
-            <Tile/>
-            <Tile/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
           </V>
         </V>
       </>

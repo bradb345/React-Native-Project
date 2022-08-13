@@ -17,49 +17,52 @@ export default class Tile extends Component {
 
 
     return (
-      <V
+      <TouchableOpacity onPress={p.press}>
 
-        style={{
-          backgroundColor: theme.grey,
-          marginBottom: 10,
-          borderRadius: 5,
-          width: "100%",
-          height: 100
+        <V
 
-        }}
-      >
-
-
-        <Card.Title
-          title="Card Title"
-          subtitle="Card Subtitle"
-          left={(props) => <Avatar.Icon {...props} icon="folder" />}
-          // right={(props) => <IconButton {...props} icon="more-vert" onPress={() => { }} />}
-          titleStyle={{
-            backgroundColor: theme.grey,
-            color: "white",
-          }}
-          subtitleStyle={{
-            backgroundColor: theme.grey,
-            color: "white",
-          }}
-          leftStyle={{
-            backgroundColor: theme.grey,
-            color: "white",
-          }}
-          rightStyle={{
-            backgroundColor: theme.grey,
-            color: "white",
-          }}
           style={{
-            // backgroundColor: theme.darkGrey,
+            backgroundColor: theme.grey,
+            marginBottom: 10,
+            borderRadius: 5,
+            width: "100%",
+            height: 100
+
           }}
-        />
+        >
 
 
-        <ProgressSlider home />
+          <Card.Title
+            title="Card Title"
+            subtitle="Card Subtitle"
+            left={(props) => <Avatar.Icon {...props} icon="folder" />}
+            // right={(props) => <IconButton {...props} icon="more-vert" onPress={() => { }} />}
+            titleStyle={{
+              backgroundColor: theme.grey,
+              color: "white",
+            }}
+            subtitleStyle={{
+              backgroundColor: theme.grey,
+              color: "white",
+            }}
+            leftStyle={{
+              backgroundColor: theme.grey,
+              color: "white",
+            }}
+            rightStyle={{
+              backgroundColor: theme.grey,
+              color: "white",
+            }}
+            style={{
+              // backgroundColor: theme.darkGrey,
+            }}
+          />
 
-      </V>
+
+          <ProgressSlider untouchable />
+
+        </V>
+      </TouchableOpacity>
 
     )
   }

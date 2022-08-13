@@ -30,7 +30,7 @@ class PlayScreen extends Component {
 
           <V center style={{ width: "100%" }}>
             <Icon touchable ionicons name="heart-outline" press={() => p.navigation.goBack()} />
-            <T  white medium > Play screen bitches </T>
+            <T white medium > Play screen bitches </T>
             <MainCard />
           </V>
           <V style={{ width: "100%" }}>
@@ -40,6 +40,16 @@ class PlayScreen extends Component {
               <ProgressSlider />
 
               <T white small>1:20</T>
+            </Row>
+          </V>
+          <V center style={{
+              // backgroundColor: theme.grey,
+              
+            }}>
+            <Row center style={{}}>
+              <Icon touchable ionicons name="ios-play-back-outline" press={() => p.navigation.goBack()} />
+              <Icon touchable ionicons name="ios-play-circle" size={45} press={() => p.navigation.goBack()} />
+              <Icon touchable ionicons name="ios-play-forward-outline" press={() => p.navigation.goBack()} />
             </Row>
           </V>
         </V>
