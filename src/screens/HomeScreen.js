@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import { theme } from '../helpers';
 import V from '../atoms/V';
 import T from '../atoms/T';
@@ -19,6 +19,9 @@ class HomeScreen extends Component {
         padding: theme.padXM,
         // flex: 1
       },
+      scrollView: {
+        marginBottom: 70,
+      },
 
     })
     return (
@@ -26,6 +29,8 @@ class HomeScreen extends Component {
         <Header />
 
         <V style={styles.container}>
+          <ScrollView style={styles.scrollView}>
+
           <V style={{
             marginBottom: 20,
             }}>
@@ -36,7 +41,18 @@ class HomeScreen extends Component {
           }}>
             <Tile press={() => p.navigation.navigate("PlayScreen")}/>
             <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
+            <Tile press={() => p.navigation.navigate("PlayScreen")}/>
           </V>
+          </ScrollView>
         </V>
       </>
     )
