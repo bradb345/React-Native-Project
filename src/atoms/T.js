@@ -8,16 +8,17 @@ export default class T extends Component {
 
     const styles = {
       tContainer: {
-        fontSize: p.large ? 60 : p.medium ? 30 : 16,
+        fontSize: p.large ? 60 : p.medium ? 40 : p.small ? 14 : 26,
         color: p.white ? "white" : "black",
+        alignItems: p.center ? "center" : "stretch", // note: sometimes "center" breaks proper overflow scrolling
+        justifyContent: p.center ? "center" : "flex-start",
         ...p.style
       }
     }
 
     return(
-      <Text {...p} white={undefined} large={undefined} medium={undefined} style={styles.tContainer}>
+      <Text {...p} white={undefined} large={undefined} medium={undefined} small={undefined} center={undefined} style={styles.tContainer}/>
 
-      </Text>
     )
   }
 }

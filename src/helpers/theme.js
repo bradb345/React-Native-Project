@@ -1,9 +1,13 @@
 import React from 'react'
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks'
 
-const padXM = 25
+const padXM = 15
 
 export const theme = {
-  dark: "#82817B",
+  black: "#171716",
+  grey: "#82817B",
+  darkGrey: "#3A3B3C" ,
+  postRollColor: "#E74C3C",
+  preRollColor: "#A93226",
   padXM,
 }
