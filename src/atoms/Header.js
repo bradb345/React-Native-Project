@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { TouchableOpacity, StatusBar } from "react-native"
+import { TouchableOpacity, StatusBar, Dimensions } from "react-native"
 import { theme } from "../helpers"
 import V from '../atoms/V'
 import T from "./T"
@@ -8,6 +8,8 @@ import { useNavigationState } from "@react-navigation/native"
 
 import Ionicons from "react-native-vector-icons/Ionicons"
 import Icon from "../atoms/Icon"
+
+const SCREEN_WIDTH = Dimensions.get('window').width // get the screen width
 
 
 class Header extends Component {
@@ -23,6 +25,7 @@ class Header extends Component {
     const playScreen = currentScreen === "PlayScreen"
     const enableBackArrow = p.routes.length > 1
 
+    const maxChars = Math.floor(SCREEN_WIDTH / 30) // set the maximum number of characters based on the screen width
 
     const styles = {
       header: {
@@ -38,6 +41,10 @@ class Header extends Component {
     const onPress = () => {
       console.log("ouch, dont touch me")
     }
+
+    const title = 'Title of book but add more' // replace with the actual title
+
+    const truncatedTitle = title.length > maxChars ? `${title.substring(0, maxChars)}...` : title // truncate the title if needed
 
     return (
       <Row left style={styles.header}>
@@ -62,8 +69,8 @@ class Header extends Component {
             </T>
           }
           {playScreen &&
-            <T white >
-              Title of book
+            <T ellipsizeMode='tail' numberOfLines={1} white>
+              {truncatedTitle} {/* use the truncated title */}
             </T>
           }
         </Row>
