@@ -25,7 +25,7 @@ class Header extends Component {
     const playScreen = currentScreen === "PlayScreen"
     const enableBackArrow = p.routes.length > 1
 
-    const maxChars = Math.floor(SCREEN_WIDTH / 30) // set the maximum number of characters based on the screen width
+    const maxChars = Math.floor(SCREEN_WIDTH / 25) // set the maximum number of characters based on the screen width
 
     const styles = {
       header: {
@@ -42,7 +42,7 @@ class Header extends Component {
       console.log("ouch, dont touch me")
     }
 
-    const title = 'Title of book but add more' // replace with the actual title
+    const title = 'Title of book addjhgjhg ' // replace with the actual title
 
     const truncatedTitle = title.length > maxChars ? `${title.substring(0, maxChars)}...` : title // truncate the title if needed
 
