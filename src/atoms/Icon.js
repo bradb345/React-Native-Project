@@ -1,41 +1,36 @@
-import React, { Component } from "react"
-import { TouchableOpacity } from "react-native"
-import { theme } from "../helpers"
+import React from "react";
+import { TouchableOpacity } from "react-native";
+import { theme } from "../helpers";
 
-import Ionicons from "react-native-vector-icons/Ionicons"
-import MaterialIcons from "react-native-vector-icons/MaterialIcons"
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
+import Ionicons from "react-native-vector-icons/Ionicons";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-export default class Icon extends Component {
-  render() {
-    const p = this.props
+const Icon = ({ touchable, press, ionicons, materialicons, materialCommunityIcons, name, size = 25, color = "#fff", style }) => {
 
-    const styles = {
-      icon: {
-        fontSize: p.size || 25,
-        color: p.color || "#fff",
-        ...p.style
+  const iconStyle = {
+    fontSize: size,
+    color: color,
+    ...style
+  };
 
-      }
-    }
+  return (
+    <>
+      {touchable ? (
+        <TouchableOpacity onPress={press}>
+          {ionicons && <Ionicons name={name || "heart-outline"} style={{ ...iconStyle }} />}
+          {materialicons && <MaterialIcons name={name || "star-rate"} style={{ ...iconStyle }} />}
+          {materialCommunityIcons && <MaterialCommunityIcons name={name || "star-rate"} style={{ ...iconStyle }} />}
+        </TouchableOpacity>
+      ) : (
+        <>
+          {ionicons && <Ionicons name={name || "heart-outline"} style={{ ...iconStyle }} />}
+          {materialicons && <MaterialIcons name={name || "star-rate"} style={{ ...iconStyle }} />}
+          {materialCommunityIcons && <MaterialCommunityIcons name={name || "star-rate"} style={{ ...iconStyle }} />}
+        </>
+      )}
+    </>
+  );
+};
 
-    return (
-      <>
-        {p.touchable ?
-          <TouchableOpacity onPress={p.press}>
-            {p.ionicons && <Ionicons {...p} name={p.name || "heart-outline"} style={{ ...styles.icon, ...p.style }} />}
-            {p.materialicons && <MaterialIcons {...p} name={p.name || "star-rate"} style={{ ...styles.icon, ...p.style }} />}
-            {p.materialCommunityIcons && <MaterialCommunityIcons {...p} name={p.name || "star-rate"} style={{ ...styles.icon, ...p.style }} />}
-          </TouchableOpacity>
-          :
-          <>
-            {p.ionicons && <Ionicons {...p} name={p.name || "heart-outline"} style={{ ...styles.icon, ...p.style }} />}
-            {p.materialicons && <MaterialIcons {...p} name={p.name || "star-rate"} style={{ ...styles.icon, ...p.style }} />}
-            {p.materialCommunityIcons && <MaterialCommunityIcons {...p} name={p.name || "star-rate"} style={{ ...styles.icon, ...p.style }} />}
-          </>
-        }
-      </>
-
-    )
-  }
-}
+export default Icon;
