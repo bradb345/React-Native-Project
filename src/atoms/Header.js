@@ -18,6 +18,7 @@ const Header = (p) => {
 
   const homeScreen = currentScreen === "HomeScreen";
   const playScreen = currentScreen === "PlayScreen";
+  const fileDirectoryScreen = currentScreen === "FileDirectoryScreen";
   const enableBackArrow = p.routes.length > 1;
 
   const maxChars = Math.floor(SCREEN_WIDTH / 25); // set the maximum number of characters based on the screen width
@@ -35,6 +36,8 @@ const Header = (p) => {
 
   const onPress = () => {
     console.log("ouch, dont touch me");
+    p.navigation.navigate("FileDirectoryScreen");
+    
   };
 
   const title = 'Title of book addjhgjhg '; // replace with the actual title
@@ -65,6 +68,11 @@ const Header = (p) => {
         {playScreen &&
           <T ellipsizeMode='tail' numberOfLines={1} white>
             {truncatedTitle} {/* use the truncated title */}
+          </T>
+        }
+        {fileDirectoryScreen &&
+          <T white >
+            File Directory
           </T>
         }
       </Row>

@@ -21,7 +21,7 @@ const HomeScreen = (p) => {
 
   return (
     <>
-      <Header />
+      <Header {...p} />
       <V style={styles.container}>
         <ScrollView style={styles.scrollView}>
           <V style={{ marginBottom: 20 }}>
