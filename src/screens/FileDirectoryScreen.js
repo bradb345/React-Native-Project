@@ -22,12 +22,14 @@ const FileDirectoryScreen = (p) => {
       const result = await DocumentPicker.pickDirectory({
         type: [DocumentPicker.types.allFiles],
       });
-      console.log("the result is: ", 
-        result.uri,
-        result.type, // mime type
-        result.name,
-        result.size
-      );
+      console.log("the result.uri is: ", result.uri); 
+
+      console.log('result.type:', result.type)// mime type
+      
+      console.log('result.name:', result.name)
+      
+      console.log('result.size:', result.size)
+      
       setDirectoryPath(result.uri);
     } catch (error) {
       if (DocumentPicker.isCancel(error)) {
