@@ -9,6 +9,9 @@ import ProgressSlider from './ProgressSlider';
 const Tile = (p) => {
   const styles = StyleSheet.create({});
 
+  const bookTitle = p.bookTitle || 'Book Title';
+  const runtime = p.runTime || "total runtime";
+
   return (
     <TouchableOpacity onPress={p.press}>
       <V
@@ -20,8 +23,8 @@ const Tile = (p) => {
           height: 100,
         }}>
         <Card.Title
-          title="Card Title"
-          subtitle="Card Subtitle"
+          title={bookTitle}
+          subtitle={runtime}
           left={(props) => <Avatar.Icon {...props} icon="folder" />}
           // right={(props) => <IconButton {...props} icon="more-vert" onPress={() => { }} />}
           titleStyle={{

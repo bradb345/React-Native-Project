@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { theme } from '../helpers';
 import Header from '../atoms/Header';
@@ -9,7 +9,8 @@ import { View, Button, } from 'react-native';
 import DocumentPicker from 'react-native-document-picker';
 
 const FileDirectoryScreen = (p) => {
-  const [directoryPath, setDirectoryPath] = useState(null);
+
+  const { directoryPath, setDirectoryPath } = p;
 
   const styles = StyleSheet.create({
     container: {
@@ -39,6 +40,7 @@ const FileDirectoryScreen = (p) => {
       }
     }
   };
+
 
   return (
     <>

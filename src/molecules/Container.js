@@ -1,43 +1,49 @@
-import React, { Component } from 'react'
-import { SafeAreaView, StyleSheet, StatusBar, View } from 'react-native'
-import Header from '../atoms/Header'
-import HomeScreen from '../screens/HomeScreen'
-import PlayScreen from '../screens/PlayScreen'
-import FileDirectoryScreen from '../screens/FileDirectoryScreen'
-import { theme } from '../helpers'
-
+import React, {useState, useEffect} from 'react';
+import { SafeAreaView, StyleSheet, StatusBar, View } from 'react-native';
+import HomeScreen from '../screens/HomeScreen';
+import PlayScreen from '../screens/PlayScreen';
+import FileDirectoryScreen from '../screens/FileDirectoryScreen';
+import { theme } from '../helpers';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default class Container extends Component {
+const Container = (p) => {
+  const Stack = createNativeStackNavigator();
 
-  render() {
-    const p = this.props
+  const [directoryPath, setDirectoryPath] = useState(null);
+  const [book, setBook] = useState(null)
 
-    const Stack = createNativeStackNavigator();
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      // padding: theme.padXM,
+      backgroundColor: theme.grey,
+      color: theme.gray
+    }
+  })
 
-    const styles = StyleSheet.create({
-      container: {
-        flex: 1,
-        // padding: theme.padXM,
-        backgroundColor: theme.grey,
-        color: theme.gray
-      },
+  return (
+    <SafeAreaView style={styles.container} >
+      {/* <Header /> */}
+      <Stack.Navigator screenOptions={{
+        headerShown: false,
+      }}>
+        <Stack.Screen name="HomeScreen">
+          {(p) => <HomeScreen {...p} directoryPath={directoryPath} setBook={setBook} />}
+        </Stack.Screen>
 
-    })
+        <Stack.Screen name="PlayScreen" >
+          {(p) => <PlayScreen {...p} 
+          directoryPath={directoryPath} 
+          book={book}
+          />}
+        </Stack.Screen>
 
-    return (
-      
-      <SafeAreaView style={styles.container} >
-        {/* <Header /> */}
-        <Stack.Navigator screenOptions={{
-          headerShown: false,
-        }}>
-          <Stack.Screen name="HomeScreen" component={HomeScreen}/>
-          <Stack.Screen name="PlayScreen" component={PlayScreen} />
-          <Stack.Screen name="FileDirectoryScreen" component={FileDirectoryScreen} />
-        </Stack.Navigator>
-
-      </SafeAreaView>
-    )
-  }
+        <Stack.Screen name="FileDirectoryScreen">
+          {(p) => <FileDirectoryScreen {...p} setDirectoryPath={setDirectoryPath} directoryPath={directoryPath} />}
+        </Stack.Screen>
+      </Stack.Navigator>
+    </SafeAreaView>
+  )
 }
+
+export default Container;

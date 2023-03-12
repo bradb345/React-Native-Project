@@ -10,6 +10,9 @@ import MainCard from '../atoms/MainCard';
 import ProgressSlider from '../atoms/ProgressSlider';
 
 const PlayScreen = (p) => {
+
+  const book = p.book
+
   const styles = StyleSheet.create({
     container: {
       padding: theme.padXM,
@@ -18,14 +21,14 @@ const PlayScreen = (p) => {
 
   return (
     <>
-      <Header {...p} />
+      <Header {...p} book={p.book} />
 
       <V style={styles.container}>
+
         <V center style={{ width: '100%' }}>
-          <Icon touchable ionicons name="heart-outline" press={() => p.navigation.goBack()} />
-          <T white medium> Play screen bitches </T>
           <MainCard />
         </V>
+
         <V style={{ width: '100%' }}>
           <Row center>
             <T white small>1:00</T>
@@ -35,17 +38,22 @@ const PlayScreen = (p) => {
             <T white small>1:20</T>
           </Row>
         </V>
+
         <V center
           style={{
             // backgroundColor: theme.grey,
           }}
         >
-          <Row center style={{}}>
+          <Row center style={{
+            width: '50%',
+            justifyContent: 'space-between',
+          }}>
             <Icon touchable ionicons name="ios-play-back-outline" press={() => p.navigation.goBack()} />
             <Icon touchable ionicons name="ios-play-circle" size={45} press={() => p.navigation.goBack()} />
             <Icon touchable ionicons name="ios-play-forward-outline" press={() => p.navigation.goBack()} />
           </Row>
         </V>
+
       </V>
     </>
   );

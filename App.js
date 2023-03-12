@@ -7,18 +7,18 @@ import { theme } from './src/helpers/theme'
 import Container from './src/molecules/Container';
 
 
-class App extends Component {
-  render() {
-    return (
-      <NavigationContainer theme={{colors:{
-        background: theme.black
-      }}}>
-        <PaperProvider>
-          <Container />
-        </PaperProvider>
-      </NavigationContainer>
-    )
-  }
+const App = () =>{
+  
+  return (
+    <NavigationContainer theme={{colors:{
+      background: theme.black
+    }}}>
+      <PaperProvider>
+        <Container />
+      </PaperProvider>
+    </NavigationContainer>
+  )
 }
+
 
 export default App

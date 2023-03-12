@@ -11,6 +11,7 @@ const MainCard = (p) => {
   return (
     <V style={{
       width: "100%",
+      height: "75%",
       backgroundColor: theme.grey,
       marginBottom: 10,
       borderRadius: 5,
@@ -18,10 +19,16 @@ const MainCard = (p) => {
       // ...p.style
     }}>
       <Card style={{
-        width: "100%"
+        width: "100%",
+        height: "100%",
       }}>
-        <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
-        <Card.Title title="Card Title" subtitle="Card Subtitle" />
+        <Card.Cover source={{ uri: 'https://picsum.photos/700'}}
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        />
+        {/* <Card.Title title="Card Title" subtitle="Card Subtitle" /> */}
           
       </Card>
 

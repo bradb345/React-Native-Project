@@ -12,6 +12,7 @@ import Icon from "../atoms/Icon";
 const SCREEN_WIDTH = Dimensions.get('window').width; // get the screen width
 
 const Header = (p) => {
+
   const currentScreen = p.routes[p.routes.length - 1].name;
 
   console.log("current screen = ", currentScreen);
@@ -40,7 +41,7 @@ const Header = (p) => {
     
   };
 
-  const title = 'Title of book addjhgjhg '; // replace with the actual title
+  const title = p.book?.title || "book undefined"; // replace with the actual title
 
   const truncatedTitle = title.length > maxChars ? `${title.substring(0, maxChars)}...` : title; // truncate the title if needed
 
